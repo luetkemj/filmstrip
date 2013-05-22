@@ -42,27 +42,30 @@
             <img src="http://placekitten.com/800/600"/>
             <img src="http://placekitten.com/1240/700"/>
             <img src="http://placekitten.com/700/600"/>
-            <img src="http://placekitten.com/700/800"/>
-            <img src="http://placekitten.com/770/500"/>
-            <img src="http://placekitten.com/800/600"/>
-            <img src="http://placekitten.com/540/700"/>
-            <img src="http://placekitten.com/700/600"/>
-            <img src="http://placekitten.com/700/800"/>
-            <img src="http://placekitten.com/770/500"/>
-            <img src="http://placekitten.com/800/600"/>
-            <img src="http://placekitten.com/540/700"/>
-            <img src="http://placekitten.com/700/600"/>
-            <img src="http://placekitten.com/700/800"/>
-            <img src="http://placekitten.com/770/500"/>
-            <img src="http://placekitten.com/800/600"/>
-            <img src="http://placekitten.com/540/700"/>
-            <img src="http://placekitten.com/700/600"/>
-            <img src="http://placekitten.com/700/800"/>
-            <img src="http://placekitten.com/770/500"/>
-            <img src="http://placekitten.com/800/600"/>
-            <img src="http://placekitten.com/540/700"/>
         </div>
     </div>
+
+
+
+    <h2>The Problem</h2>
+    <p>I needed a filmstrip style carousel that could support images of varying widths. This is fairly easy to solve if you are working with a static site but the carousel was required to be responsive both horizontally and vertically.</p>
+
+    <p>Supporting responsive width while maintaining a flush edge on the top and bottom proved problematic. Portrait images would retain a very tall vertical while landscape would become extremely short.</p>
+
+    <h3>Example</h3>
+
+    <p>Image of flush filmstrip</p>
+    <img src="images/filmstrip-demo1.png"/>
+
+    <p>Image of same filmstrip when the viewport becomes narrower. Notice how the landscape image proptionally resizes to fit the viewport while the portrait image does not. Why would it? The width which is how this is triggered with CSS is not narrower than the viewport. Unfortunately it creates a nasty rag.</p>
+    <img src="images/filmstrip-demo2.png"/>
+
+
+    <h2>The Solution</h2>
+    
+    <p>To solve this problem I created a jquery script that filters through all the images and reduces them proportionally to a max-width of the viewport. It then filters through again and proportionally reduces ass image to the height of the shortest image.</p>
+    
+    <p>This allows the carousel to remain flush at the top and bottom and retain a filmstrip appearance while also being fully responsive. Images should not be wider or taller than the window or viewport</p>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
