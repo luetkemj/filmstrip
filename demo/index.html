@@ -25,8 +25,8 @@
 
     <h1>Filmstrip.js</h1>
     <p>jQuery filmstrip carousel that supports images of varying widths and height. Fully responsive.</p>
-    <p>images courtesy of <a href="http://placekitten.com/">placekitten.com</a></p>
-    <p><a href="">github repo</a></p>
+    <p>images courtesy of <a href="http://placekitten.com/" target="_blank">placekitten.com</a></p>
+    <p><a href="https://github.com/luetkemj/filmstrip/commits?author=luetkemj" target="_blank">github repo</a></p>
 
     <div id="filmstrip-viewport">
         <div id="filmstrip-wrapper" class="clearfix">
@@ -57,13 +57,13 @@
     <p>Image of flush filmstrip</p>
     <img src="images/filmstrip-demo1.png"/>
 
-    <p>Image of same filmstrip when the viewport becomes narrower. Notice how the landscape image proptionally resizes to fit the viewport while the portrait image does not. Why would it? The width which is how this is triggered with CSS is not narrower than the viewport. Unfortunately it creates a nasty rag.</p>
+    <p>Image of same filmstrip when the viewport becomes narrower. Notice how the landscape image proportionally resizes to fit the viewport while the portrait image does not. Why would it? The width which is how this is triggered with CSS is not narrower than the viewport. Unfortunately it creates a nasty rag.</p>
     <img src="images/filmstrip-demo2.png"/>
 
 
     <h2>The Solution</h2>
     
-    <p>To solve this problem I created a jquery script that filters through all the images and reduces them proportionally to a max-width of the viewport. It then filters through again and proportionally reduces ass image to the height of the shortest image.</p>
+    <p>To solve this problem I created a jQuery script that filters through all the images and reduces them proportionally to a max-width of the viewport. It then filters through again and proportionally reduces the image to the height of the shortest image.</p>
     
     <p>This allows the carousel to remain flush at the top and bottom and retain a filmstrip appearance while also being fully responsive. Images should not be wider or taller than the window or viewport</p>
 
