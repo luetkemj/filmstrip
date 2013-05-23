@@ -30,7 +30,7 @@ FilmStrip.prototype.setContainerWidth = function(){
         width = width + $(this).width();
     });
 
-    this.container.width( width );
+    this.container.width( width + 2);
 
 };
 
