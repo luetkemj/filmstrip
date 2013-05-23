@@ -13,6 +13,7 @@
 function FilmStrip ( container, viewport ){
     this.container = container;
     this.cells = this.container.find('img');
+    this.htmlCells = this.container.find('li.html');
     this.viewportWidth = $(viewport).width();
 
     this.fitCellWidthToViewport();
@@ -27,6 +28,10 @@ FilmStrip.prototype.setContainerWidth = function(){
     var width = 0;
 
     $( this.cells ).each(function(){
+        width = width + $(this).width();
+    });
+
+    $( this.htmlCells ).each(function(){
         width = width + $(this).width();
     });
 
@@ -120,6 +125,11 @@ FilmStrip.prototype.fitCellHeightToMinimum = function(){
         width = ratio * width;
         height = ratio * height;
 
+        $this.width(width).height(height);
+    });
+
+    this.htmlCells.each(function(){
+        var $this = $(this);
         $this.width(width).height(height);
     });
     
